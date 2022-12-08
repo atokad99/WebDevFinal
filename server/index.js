@@ -29,7 +29,6 @@ app
 .use('/api/v1/users', usersController)
 
 app.get('*', (req, res) => {
-    
     res.sendFile('index.html', {root: './client/dist'});
 })
 
