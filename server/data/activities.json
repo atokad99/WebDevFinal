@@ -1,0 +1,85 @@
+{
+    "activities": [
+        {
+        "id": 1,
+        "user": "Dakota Marino",
+        "tag": "ddtm13",
+        "date": "Fri Oct 20 2022",
+        "title": "Lifted Weights!",
+        "time": 15,
+        "distance": 23,
+        "sets": 10,
+        "reps": 123,
+        "weight": 150,
+        "image": "https://t4.ftcdn.net/jpg/02/86/09/83/360_F_286098390_D2J4jLbOkCzikuSXxQBh26IxhR7t4i28.jpg"
+        },
+        {
+        "id": 2,
+        "user": "Melanie Marino",
+        "tag": "melmar50",
+        "date": "Fri Oct 20 2022",
+        "title": "Lifted Weights!",
+        "time": 15,
+        "distance": 23,
+        "sets": 10,
+        "reps": 123,
+        "weight": 150,
+        "image": "https://t4.ftcdn.net/jpg/02/86/09/83/360_F_286098390_D2J4jLbOkCzikuSXxQBh26IxhR7t4i28.jpg"
+        },
+        {
+        "id": 3,
+        "user": "Dylan Altadonna",
+        "tag": "dilly",
+        "date": "Fri Oct 20 2022",
+        "title": "Lifted Weights!",
+        "time": 15,
+        "distance": 23,
+        "sets": 10,
+        "reps": 123,
+        "weight": 150,
+        "image": "https://t4.ftcdn.net/jpg/02/86/09/83/360_F_286098390_D2J4jLbOkCzikuSXxQBh26IxhR7t4i28.jpg"
+        },
+        {
+        "id": 4,
+        "user": "Dakota Marino",
+        "tag": "ddtm13",
+        "date": "Fri Oct 20 2022",
+        "title": "Lifted Weights!",
+        "time": 15,
+        "distance": 23,
+        "sets": 10,
+        "reps": 123,
+        "weight": 150,
+        "image": "https://t4.ftcdn.net/jpg/02/86/09/83/360_F_286098390_D2J4jLbOkCzikuSXxQBh26IxhR7t4i28.jpg"
+        },
+        {
+        "id": 5,
+        "user": "Dakota Marino",
+        "tag": "ddtm13",
+        "date": "Fri Oct 20 2022",
+        "title": "Lifted Weights!",
+        "time": 15,
+        "distance": 23,
+        "sets": 10,
+        "reps": 123,
+        "weight": 150,
+        "image": "https://t4.ftcdn.net/jpg/02/86/09/83/360_F_286098390_D2J4jLbOkCzikuSXxQBh26IxhR7t4i28.jpg"
+        },
+        {
+        "id": 6,
+        "user": "Dakota Marino",
+        "tag": "ddtm13",
+        "date": "Fri Oct 20 2022",
+        "title": "Lifted Weights!",
+        "time": 15,
+        "distance": 23,
+        "sets": 10,
+        "reps": 123,
+        "weight": 150,
+        "image": "https://t4.ftcdn.net/jpg/02/86/09/83/360_F_286098390_D2J4jLbOkCzikuSXxQBh26IxhR7t4i28.jpg"
+        }
+    ],
+    "total": 100,
+    "skip": 0,
+    "limit": 30
+}
