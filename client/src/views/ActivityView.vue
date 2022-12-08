@@ -32,11 +32,16 @@
         return userName;
     }
 
+    function getUserTag() {
+        let userTag = session.user?.tag;
+        return userTag;
+    }
+
     function submitData() {
             const newActivity: Activity = {
                 _id: (getActivities.length+1).toString(),
-                user: getUserName(), 
-                tag: "@ddtm13", 
+                user: getUserName(),
+                tag: getUserTag() as string, 
                 date: printDate(),
                 title: workoutLog[1].var as string,
                 time: workoutLog[2].var as number,
