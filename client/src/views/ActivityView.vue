@@ -32,10 +32,6 @@
         return userName;
     }
 
-    function deletePost(_id: string) {
-        deleteActivity(_id);
-    }
-
     function submitData() {
             const newActivity: Activity = {
                 _id: (getActivities.length+1).toString(),
@@ -122,7 +118,7 @@
                     <a><img class="img_small" src="https://cdn-icons-png.flaticon.com/512/126/126473.png"/></a>
                     <a><img class="img_small" src="https://cdn.iconscout.com/icon/free/png-256/thumbs-down-12-616177.png"/></a>
                     <a><img class="img_small" src="https://banner2.cleanpng.com/20180401/evq/kisspng-computer-icons-share-icon-sharing-symbol-share-5ac0b95e8abc13.8486960415225798065683.jpg"/></a>
-                    <a v-if="(session.user.tag === activity.tag)" @click="deletePost(activity._id)"><img class="img_small" src="https://cdn-icons-png.flaticon.com/512/1345/1345874.png"/></a>
+                    <a v-if="(session.user.tag === activity.tag)"><img class="img_small" src="https://cdn-icons-png.flaticon.com/512/1345/1345874.png"/></a>
                 </div>
                 <div v-if="(session.user.tag === activity.tag)">
                     <div class="spacing"></div>

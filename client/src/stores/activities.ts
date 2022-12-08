@@ -5,19 +5,11 @@ import { api } from "./session";
 export function getActivities() {
   return api<ListEnvelope<Activity>>('activities');
 }
-/*
-export function getProduct(id: string) {
-  return api<Product>(`products/${id}`)
-}
-*/
+
 export function addActivity(activity: Activity) {
     return api<Activity>(`activities`, activity);
 }
-/*
-export function updateProduct(id: string, product: Product) {
-    return api<Product>(`products/${id}`, product, 'PATCH');
-}
-*/
+
 export function deleteActivity(_id: string) {
     return api<{deletedCount:boolean}>(`activities/${_id}`,{}, 'DELETE');
 }
