@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AdminView from '../views/AdminView.vue'
 import ActivityView from '../views/ActivityView.vue'
 import SocialView from '../views/SocialView.vue'
+import LoginView from '../views/LoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,7 +16,7 @@ const router = createRouter({
     {
       path: '/social',
       name: 'social',
-      component: () => import('../views/SocialView.vue')
+      component: SocialView,
     },
     {
         path: '/admin',
@@ -27,6 +28,11 @@ const router = createRouter({
       name: 'activity',
       component: ActivityView,
   },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView,
+},
   ]
 })
 
