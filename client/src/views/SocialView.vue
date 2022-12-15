@@ -3,19 +3,86 @@
     import session from '../stores/session';
     import { reactive, ref } from "vue";
     import { getActivities, deleteActivity, type Activity } from "../stores/activities";
+    import {setPost, getPost} from "../stores/search"
 
     const activities = reactive([] as Activity[]);
     getActivities().then( x=> activities.push(...x.activities));
+
+
+
+    let input = ref("");
+    //const fruits = ["apple", "banana", "orange"];
+/*    function filteredList() {
+        const activitiesTemp = activities;
+        for (const i in activitiesTemp) {
+            console.log(activitiesTemp);
+             if(activitiesTemp[i].user.toLowerCase().includes(input.value.toLowerCase())) {
+                return activitiesTemp[i].user;
+            }
+            else if(activitiesTemp[i].tag.toLowerCase().includes(input.value.toLowerCase())) {
+                return activitiesTemp[i].tag
+            }
+            else if(activitiesTemp[i].date.toLowerCase().includes(input.value.toLowerCase())) {
+                activitiesTemp[i].date
+            }
+            else if(activitiesTemp[i].title.toLowerCase().includes(input.value.toLowerCase())) {
+                activitiesTemp[i].title
+            }
+            else {
+                return null;
+            }
+        }*/
+    /*return activities.filter((activity) =>
+        activity.user.toLowerCase().includes(input.value.toLowerCase()),
+        activity.tag.toLowerCase().includes(input.value.toLowerCase()),
+        activity.date.toLowerCase().includes(input.value.toLowerCase()),
+        activity.title.toLowerCase().includes(input.value.toLowerCase()),      
+    );*/
+//}
+function filteredList() {
+    console.log(input.value);
+  if (input.value !== "") {
+  const userSearch = activities.filter((activity) =>
+    activity.user.toLowerCase().includes(input.value.toLowerCase()) ||
+    activity.tag.toLowerCase().includes(input.value.toLowerCase()) ||
+    activity.date.toLowerCase().includes(input.value.toLowerCase()) ||
+    activity.title.toLowerCase().includes(input.value.toLowerCase()) 
+  );
+  if (userSearch.length) {
+    return userSearch;
+  }
+  else {
+    return null;
+  }
+  }  
+}
+
+    
+
 </script>
 
 <template>
     <div v-if="session.user">
         <div class="columns" >
-            <div class="column is-centered is-12">
+            <div class="column is-centered has-text-centered is-12">
                 <br><br>
                 <h1 class="title has-text-centered">Social View</h1>
                 <p class="has-text-centered">Here you will find your activity and your friend's activity. Try to keep up!</p>
                 <br>
+                <input type="text" v-model="input" placeholder="Search" />
+                <div v-for="search in filteredList()" :key="search">
+                    <p>User: {{ search.user }}</p>
+                    <p>Tag: {{search.tag}}</p>
+                    <p>Date: {{search.date}}</p>
+                    <p>Title: {{search.title}}</p>
+                    <router-link to="/posts" tag="button">
+                        <input type="submit" value="Show Post" class="button" @click="setPost(search as Activity)" /> 
+                    </router-link> 
+                    <hr />
+                </div>
+                <div v-if="input && filteredList() === null">
+                    <p>No results found!</p>                    
+                </div>
             </div>        
         </div>
         <hr />

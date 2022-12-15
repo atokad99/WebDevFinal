@@ -11,7 +11,7 @@ export default function myFetch<T>(url: string, data: any = null, method?: strin
     console.log("url: " + url);
     console.log("data: " + data);
     console.log("method: " + method);
-    return fetch(API_ROOT + url, options).then( x=>{
+    return fetch("http://localhost:3003/api/v1/" + url, options).then( x=>{
         if(x.ok){
             console.log("x: " + x);
             return x.json();
