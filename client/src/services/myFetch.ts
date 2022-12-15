@@ -1,4 +1,4 @@
-//export const API_ROOT = import.meta.env.VITE_API_ROOT;
+export const API_ROOT = import.meta.env.VITE_API_ROOT;
 
 export default function myFetch<T>(url: string, data: any = null, method?: string ): Promise<T> {
     const options: RequestInit = {
@@ -11,7 +11,7 @@ export default function myFetch<T>(url: string, data: any = null, method?: strin
     console.log("url: " + url);
     console.log("data: " + data);
     console.log("method: " + method);
-    return fetch("https://fitness4ufinal.onrender.com/api/v1/" + url, options).then( x=>{
+    return fetch(API_ROOT + url, options).then( x=>{
         if(x.ok){
             console.log("x: " + x);
             return x.json();
