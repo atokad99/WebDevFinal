@@ -70,7 +70,7 @@ function filteredList() {
                 <p class="has-text-centered">Here you will find your activity and your friend's activity. Try to keep up!</p>
                 <br>
                 <input type="text" v-model="input" placeholder="Search" />
-                <div v-for="search in filteredList()" :key="search">
+                <div v-for="search in filteredList()">
                     <p>User: {{ search.user }}</p>
                     <p>Tag: {{search.tag}}</p>
                     <p>Date: {{search.date}}</p>
